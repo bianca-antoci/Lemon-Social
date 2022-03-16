@@ -1,0 +1,19 @@
+<div class="scroll-layout">
+    <div class="initial-padding">
+    </div>
+    <div>
+        <h1>{{title}}</h1>
+    </div>
+
+    <mat-spinner *ngIf="viewState.isLoading"></mat-spinner>
+    <div *ngIf="!viewState.isLoading">
+        <div *ngIf="feedPosts.length === 0">
+            No posts so far. Create your first one
+        </div>
+        <app-individual-post-component [post]="feedPost" [currentUser]="currentUser" *ngFor="let feedPost of feedPosts"></app-individual-post-component>
+        <br>
+        <br>
+        <br>
+    </div>
+
+</div>

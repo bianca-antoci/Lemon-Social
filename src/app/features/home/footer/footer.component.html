@@ -1,0 +1,21 @@
+<footer class="footer">
+  <mat-toolbar color="primary">
+    <button (click)="onItemClick('home')" mat-icon-button color="basic"
+      aria-label="Example icon button with a home icon">
+      <mat-icon class="mat-icon-selected">home</mat-icon>
+    </button>
+    <button (click)="onItemClick('recipies')" mat-icon-button color="basic"
+      aria-label="Example icon button with a home icon">
+      <mat-icon>menu_book</mat-icon>
+    </button>
+    <button (click)="onItemClick('diets')" mat-icon-button color="basic"
+      aria-label="Example icon button with a home icon">
+      <mat-icon>local_dining</mat-icon>
+    </button>
+    <button (click)="onItemClick('products')" mat-icon-button color="basic"
+      aria-label="Example icon button with a home icon">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+    <img *ngIf="user" (click)="onItemClick('profile')" src="{{user.avatar}}" alt="Avatar">
+  </mat-toolbar>
+</footer>

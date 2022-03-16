@@ -1,0 +1,67 @@
+<div class="container feature">
+   <div>
+      <div class="avatar-pencil" (click)="fileSelect.click()">
+         <mat-icon>edit</mat-icon>
+      </div>
+      <div>
+         <img class="avatar-img" src="{{currentUser.avatar}}" alt="Avatar">
+         <input style="display: none" #fileSelect accept="image/*" class="input-file" type='file'
+            (change)="onFilePick($event);" />
+      </div>
+   </div>
+   <div>
+      <div class="avatar-pencil" (click)="openNameDialog()">
+         <mat-icon>edit</mat-icon>
+      </div>
+      <h1>{{currentUser.name}}</h1>
+   </div>
+   <br>
+   <br>
+   <div class="body-field field-container">
+      <mat-form-field appearance="fill" [(ngModel)]="currentUser.about" ngDefaultControl>
+         <mat-label>About me</mat-label>
+         <textarea (blur)="onFieldBlur()" matInput placeholder="" value="{{currentUser.about}}"></textarea>
+      </mat-form-field>
+      <br>
+      <div class="my-posts">
+         <h3><strong>My posts</strong></h3>
+      </div>
+      <div>
+         <mat-grid-list cols="2" rowHeight="2:3">
+            <mat-grid-tile *ngFor="let post of myPosts">
+               <mat-card>
+                  <mat-card-header>
+                     <div mat-card-avatar class="header-image"
+                        [style.background-image]="'url(' + post.profilePicture + ')'"></div>
+                     <mat-card-title>{{post.userName}}</mat-card-title>
+                     <mat-card-subtitle>{{post.type}}</mat-card-subtitle>
+                  </mat-card-header>
+                  <div *ngIf="post.images && post.images.length > 0">
+                     <img class="carouse-img" [src]="post.images[0]">
+                  </div>
+                  <div *ngIf="!post.images" class="carouse-img">
+                  </div>
+                  <div class="text">
+                     {{post.body}}
+                  </div>
+                  <div class="like" mat-button>
+                     {{post.likeCount}} <mat-icon class="liked" *ngIf="post.likeCount>0">favorite</mat-icon>
+                     <mat-icon *ngIf="post.likeCount === 0">favorite_border</mat-icon>
+                  </div>
+               </mat-card>
+            </mat-grid-tile>
+         </mat-grid-list>
+      </div>
+      <br>
+      <div class="my-posts">
+         <h3><strong>Other options</strong></h3>
+      </div>
+      <div style="text-align: left;">
+         <button (click)="onLogout()" mat-raised-button color="primary">LOG OUT FROM LEMON</button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+   </div>
+</div>

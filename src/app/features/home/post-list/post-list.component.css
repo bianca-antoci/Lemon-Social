@@ -1,0 +1,15 @@
+.scroll-layout {
+    position: relative;
+}
+
+.initial-padding {
+    margin-top: 60px;
+}
+
+h1 {
+    padding: 12px;
+}
+
+::ng-deep .carousel-cell img {
+    width: 98% !important;
+}

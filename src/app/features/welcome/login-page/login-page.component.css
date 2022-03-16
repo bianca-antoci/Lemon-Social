@@ -1,0 +1,16 @@
+.container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 50%;
+}
+/* .full-width {
+    width: 44%;
+    margin: auto;
+} */
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}

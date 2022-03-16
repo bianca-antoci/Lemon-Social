@@ -1,0 +1,22 @@
+.mobile-view {
+    max-width: 500px;
+    margin: auto;
+}
+
+::ng-deep mat-spinner {
+    margin: auto;
+    margin-top: 200px;
+}
+
+::ng-deep .feature {
+    margin-top: 70px;
+}
+
+::ng-deep .mat-card {
+    background: #42424200;
+    color: #000;
+}
+
+::ng-deep .mat-card-subtitle {
+    color: #000;
+}

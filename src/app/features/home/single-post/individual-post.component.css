@@ -1,0 +1,37 @@
+mat-card {
+    margin: 10px;
+    padding: 0px;
+}
+
+.text {
+    padding: 15px;
+    white-space: break-spaces;
+}
+
+carousel {
+    z-index: auto;
+    min-height: 500px;
+}
+img {
+    object-fit: cover !important;
+}
+.header-image {
+    background-size: cover;
+}
+
+mat-card-header {
+    padding: 15px 0 0 15px;
+}
+
+.like {
+    display: flex;
+    padding: 15px;
+    font-weight: bold;
+}
+mat-icon{
+    margin-left: 5px;
+}
+
+.liked {
+    color: red;
+}

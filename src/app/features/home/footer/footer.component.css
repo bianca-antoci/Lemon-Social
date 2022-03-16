@@ -1,0 +1,20 @@
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-width: 500px;
+    z-index: 100;
+}
+
+mat-toolbar {
+    background-color: black !important;
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}

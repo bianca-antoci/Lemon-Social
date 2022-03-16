@@ -1,0 +1,30 @@
+<div class="container">
+    <br>
+    <br>
+    <div>
+        <img class="logo" src="/assets/logo.png">
+    </div>
+    <div>
+        <h1>Lemon Social Network</h1>
+    </div>
+    <br>
+    <div>
+        To continue please login using your favourite platform.
+    </div>
+    <br>
+    <br>
+    <div>
+        <button style="color: #757575; width: 220px;" mat-raised-button [routerLink]="'./email'" type="submit">
+            <span class="vertical-align">
+                <mat-icon>email</mat-icon>&nbsp;&nbsp;&nbsp;&nbsp;Sign in with email
+            </span>
+        </button>
+    </div>
+    <div>
+        <firebase-ui></firebase-ui>
+    </div>
+    <br>
+    <div>
+        <a [routerLink]="'./register'">Create new account</a>
+    </div>
+</div>
